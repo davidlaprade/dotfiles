@@ -1,9 +1,9 @@
 [user]
-  name = Michael Bianco
-  email = iloveitaly@gmail.com
+  name = David Laprade
+  email = david.laprade@gmail.com
 [github]
-  user = iloveitaly
-  token = 77e92535c1c0c00e080c1e601713ba3f
+  user = davidlaprade
+  # token = 77e92535c1c0c00e080c1e601713ba3f
 [core]
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
@@ -11,6 +11,8 @@
   editor = nano
 [alias]
   st = status -sb
+  a = add -A
+  cm = commit -m
   c = checkout
   b = branch
   d = diff
