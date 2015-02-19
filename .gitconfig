@@ -8,9 +8,10 @@
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
   whitespace = fix,space-before-tab,tab-in-indent,trailing-space
-  editor = nano
+  editor = vim
 [alias]
   p = push origin HEAD
+  pf = push --force origin HEAD
   st = status -sb
   a = add -A
   cm = commit -m
