@@ -17,9 +17,13 @@ if [[ ! -z `which rbenv` ]]; then
 	eval "$(rbenv init -)"
 fi
 
-# git autocompletion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
+# git autocompletion for git alias = g
+# https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
+# you may need to install git-completion.bash with:
+# curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+  complete -o default -o nospace -F _git g;
 fi
 
 # Case-insensitive globbing (used in pathname expansion)
@@ -30,6 +34,3 @@ shopt -s nocaseglob
 
 # Add tab completion for `defaults read|write NSGlobalDomain`
 complete -W "NSGlobalDomain" defaults
-
-# Autocomplete for 'g' as well
-complete -o default -o nospace -F _git g
