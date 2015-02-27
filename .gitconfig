@@ -10,11 +10,12 @@
   whitespace = fix,space-before-tab,tab-in-indent,trailing-space
   editor = vim
 [alias]
+  pl = pull --rebase origin HEAD
   p = push origin HEAD
   pf = push --force origin HEAD
   st = status -sb
   a = add -A
-  cm = commit -m
+  cm = commit
   c = checkout
   b = branch
   d = diff
@@ -28,6 +29,7 @@
   # http://technosorcery.net/blog/2010/02/07/fun-with-the-upcoming-1-7-release-of-git-rebase---interactive---autosquash/
   fixup = !sh -c 'git commit --fixup=$1' -
   squash = !sh -c 'git commit --squash=$1' -
+  rc = rebase --continue
   ri = rebase --interactive --autosquash
 [color]
   ui = auto
