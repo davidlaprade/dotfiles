@@ -17,6 +17,8 @@
   a = add -A
   cm = commit
   c = checkout
+  cb = checkout -b
+  bd = branch -d
   b = branch
   d = diff
   # Find FIXME, TODO, etc
