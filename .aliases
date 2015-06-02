@@ -6,6 +6,9 @@ alias .....="cd ../../../.."
 # alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+# vim
+alias vim="/usr/local/Cellar/vim/7.4.712/bin/vim"
+
 # Shortcuts
 # alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
