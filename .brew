@@ -17,6 +17,9 @@ brew update && brew upgrade
 
 brew upgrade brew-cask
 
+# install vim
+brew install vim
+
 # os x application install
 
 brew install caskroom/cask/brew-cask
