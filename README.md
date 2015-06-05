@@ -24,6 +24,13 @@ cd && ln -s path/to/this/directory/.vimrc &&\
     ln -s path/to/this/directory/.vimrc.bundles
 ```
 
+If you're going to be making any modifications to these files, sym-link the
+`.*.local` versions as well. E.g.:
+```bash
+cd && ln -s path/to/this/directory/.vimrc.local &&\
+    ln -s path/to/this/directory/.vimrc.bundles.local
+```
+
 The `.vimrc` and `.vimrc.bundles` files presuppose that you have
 a `~/.vim` directory created with the following structure:
 ```bash
