@@ -18,6 +18,12 @@ Next install c-tags:
 brew install ctags
 ```
 
+Next sym-link your `.vimrc` and `.vimrc.bundles` files into home:
+```bash
+cd && ln -s path/to/this/directory/.vimrc &&\
+    ln -s path/to/this/directory/.vimrc.bundles
+```
+
 The `.vimrc` and `.vimrc.bundles` files presuppose that you have
 a `~/.vim` directory created with the following structure:
 ```bash
@@ -27,8 +33,9 @@ $ tree .vim
 │   └── plug.vim
 └── bundle
 ```
+
 The `plug.vim` file comes from [vim-plug](https://github.com/junegunn/vim-plug),
-which can be installed via:
+which has to be installed via:
 ```bash
 mkdir ~/.vim/autoload && curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
