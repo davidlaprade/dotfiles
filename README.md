@@ -20,10 +20,11 @@ gem install gem-ctags
 gem ctags
 ```
 
-Next sym-link your `.vimrc` and `.vimrc.bundles` files into home:
+Next sym-link your `.vimrc`, `.vimrc.bundles`, and `.git_templates` into `~`:
 ```bash
 cd && ln -s path/to/this/directory/.vimrc &&\
-    ln -s path/to/this/directory/.vimrc.bundles
+    ln -s path/to/this/directory/.vimrc.bundles &&\
+    ln -s path/to/this/directory/.git_templates
 ```
 
 If you're going to be making any modifications to these files, sym-link the
