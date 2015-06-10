@@ -13,9 +13,11 @@ brew update
 brew install vim
 ```
 
-Next install c-tags:
+Next install c-tags and some associated programs:
 ```bash
 brew install ctags
+gem install gem-ctags
+gem ctags
 ```
 
 Next sym-link your `.vimrc` and `.vimrc.bundles` files into home:
