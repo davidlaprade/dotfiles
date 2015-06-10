@@ -51,9 +51,13 @@ mkdir ~/.vim/autoload && curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-Restart your terminal session. Make sure you've sym-linked the `.vimrc` and `.vimrc.bundles` files into
-your home directory `~`. Open vim and run `:PlugInstall` to install the plugins.
+Restart your terminal session. Open vim and run `:PlugInstall` to install the plugins.
 You should be good to go with vim from here!
+
+To index an existing git repo just run:
+```bash
+git init && git ctags
+```
 
 ## Thanks to…
 * [Mathias Bynens](https://github.com/mathiasbynens) for sharing his amazing collection of [dotfiles](https://github.com/mathiasbynens/dotfiles)
