@@ -75,3 +75,8 @@
   statusHints = false
 [hub]
   protocol = https
+
+# set up git hooks to automatically reindex ctags based on git commits
+# http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
+[init]
+  templatedir = '~/.git_template'
