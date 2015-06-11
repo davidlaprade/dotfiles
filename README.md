@@ -60,6 +60,8 @@ git init && git ctags
 ```
 
 ## Thanks to…
+* [iloveitaly](https://github.com/iloveitaly) for turning me on to the idea of
+  dotfiles in the first place
 * [Mathias Bynens](https://github.com/mathiasbynens) for sharing his amazing collection of [dotfiles](https://github.com/mathiasbynens/dotfiles)
 * [thoughtbot](https://github.com/thoughtbot/dotfiles) for sharing their awesome
   `vimrc` configs
