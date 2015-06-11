@@ -1,6 +1,29 @@
 " easily exit insert mode with 'jk'
 inoremap jk <Esc>
 
+" emacs-like begining and end of line
+inoremap <C-a> <c-o>0
+inoremap <C-e> <c-o>$
+map <C-a> 0
+map <C-e> $
+
+" delete to end of line
+map <C-k> D
+inoremap <C-k> <esc>Di
+
+" delete to begining of line
+map <C-j> d0
+inoremap <C-j> <esc>d0I
+
+" undo and redo in insert mode
+inoremap <C-u> <esc>ui
+inoremap <C-r> <esc><C-r>i
+
+" easier top-bottom navigation
+nmap <C-l> L
+nmap <C-h> H
+nmap <C-m> z.
+
 " Color scheme
 colorscheme github
 highlight NonText guibg=#060606
