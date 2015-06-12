@@ -2,27 +2,20 @@
 inoremap jk <Esc>
 
 " emacs-like begining and end of line
-inoremap <C-a> <c-o>0
-inoremap <C-e> <c-o>$
-map <C-a> 0
-map <C-e> $
+inoremap <C-a> <c-o>^
+inoremap <C-e> <c-o>g_
+map <C-a> ^
+map <C-e> g_
 
 " delete to end of line
-map <C-k> D
-inoremap <C-k> <esc>Di
+inoremap <C-k> <esc>DA
 
 " delete to begining of line
-map <C-j> d0
-inoremap <C-j> <esc>d0I
+inoremap <C-j> <esc>d0a
 
 " undo and redo in insert mode
 inoremap <C-u> <esc>ui
 inoremap <C-r> <esc><C-r>i
-
-" easier top-bottom navigation
-nmap <C-l> L
-nmap <C-h> H
-nmap <C-m> z.
 
 " Color scheme
 colorscheme github
