@@ -17,6 +17,10 @@ inoremap <C-j> <esc>d0a
 inoremap <C-u> <esc>ui
 inoremap <C-r> <esc><C-r>i
 
+" add empty lines
+nmap <enter> o<esc>
+nmap <S-Enter> O<esc>
+
 " Color scheme
 colorscheme github
 highlight NonText guibg=#060606
