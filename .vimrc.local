@@ -1,3 +1,5 @@
+set relativenumber
+
 " easily exit insert mode with 'jk'
 inoremap jk <Esc>
 
