@@ -20,8 +20,11 @@ inoremap <C-u> <esc>ui
 inoremap <C-r> <esc><C-r>i
 
 " add empty lines
-nmap <enter> o<esc>
-nmap <S-Enter> O<esc>
+nmap <CR> o<esc>
+nmap <Leader><CR> O<esc>
+
+" view place in page history
+map <Leader>j :jumps<cr>
 
 " Color scheme
 colorscheme github
