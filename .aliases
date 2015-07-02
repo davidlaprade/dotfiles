@@ -8,7 +8,8 @@ alias -- -="cd -"
 
 # vim
 alias vim="/usr/local/Cellar/vim/7.4.712/bin/vim"
-alias v="vim ."
+vimpath () { vim ./"$@"; }
+alias v="vimpath"
 
 # Shortcuts
 # alias d="cd ~/Documents/Dropbox"
