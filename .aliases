@@ -43,7 +43,7 @@ alias fs="stat -f \"%z bytes\""
 
 # vim
 alias vim="/usr/local/Cellar/vim/7.4.712/bin/vim"
-vimpath () { vim ./"$@"; }
+vimpath () { vim "$@"; }
 alias v="vimpath"
 
 # git
