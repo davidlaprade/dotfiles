@@ -32,6 +32,9 @@ map <Leader>i mmgg=G`m
 " copy to clipboard
 map <Leader>c "*y
 
+" paste from clipboard
+map <Leader>v "*p
+
 " Color scheme
 colorscheme github
 highlight NonText guibg=#060606
