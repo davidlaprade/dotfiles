@@ -1,6 +1,6 @@
 set relativenumber
 
-" easily exit insert mode with 'jk'
+" exit insert mode with 'jk'
 inoremap jk <Esc>
 
 " emacs-like begining and end of line
@@ -25,6 +25,12 @@ nmap <Leader><CR> O<esc>
 
 " view place in page history
 map <Leader>j :jumps<cr>
+
+" fix indentation in whole file
+map <Leader>i mmgg=G`m
+
+" copy to clipboard
+map <Leader>c "*y
 
 " Color scheme
 colorscheme github
