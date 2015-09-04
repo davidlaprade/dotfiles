@@ -30,6 +30,9 @@
   ctags = "!sh -c '[ -f .git/hooks/ctags ] || git init; .git/hooks/ctags' git-ctags"
   fa = fetch --all
   am = am --ignore-whitespace
+  cp = cherry-pick
+  dc = diff --cached
+  ap = add -p
 
   # http://technosorcery.net/blog/2010/02/07/fun-with-the-upcoming-1-7-release-of-git-rebase---interactive---autosquash/
   fixup = !sh -c 'git commit --fixup=$1' -
