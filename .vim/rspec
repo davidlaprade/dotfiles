@@ -1,4 +1,4 @@
-let g:rspec_command = '!zeus rspec {spec}'
+let g:rspec_command = '!zeus rspec {spec} || bundle exec rspec {spec}'
 
 nnoremap <Leader>rt :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>rs :call RunNearestSpec()<CR>
