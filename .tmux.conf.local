@@ -1,0 +1,10 @@
+# re-source tmux
+bind-key r source-file ~/.tmux.conf \; display-message "Boom! tmux.conf reloaded"
+
+# use emacs on the tmux command line
+set -g status-keys "emacs"
+
+# format right side of green status bar
+# set -g status-right " #(battery -t)  #(date '+%a, %b %d - %I:%M') "
+set -g status-right-length 50
+set -g status-right " #(battery -at)  #(date '+%a, %b %d - %I:%M %p') "
