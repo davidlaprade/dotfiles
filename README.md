@@ -59,9 +59,27 @@ To index an existing git repo just run:
 git init && git ctags
 ```
 
+Here are some [vim
+commands](https://gist.github.com/davidlaprade/ec6b0e26a6525f89293a) that I have found useful when getting started.
+
+
+### Tmux Installation/Configuration
+
+```bash
+brew install tmux
+# optional -- adds a battery meter to tmux status bar
+brew tap Goles/battery && brew install battery
+```
+
+Make sure iTerm's color preferences are correct. Go to iTerm > Preferences >
+Profiles > Terminal and set `Report Terminal Type` to `xterm-256color`.
+Otherwise vim's color scheme will get messed up in tmux.
+
+Here are some [tmux commands](https://gist.github.com/davidlaprade/0c54559e9e1007e6aa5b) that I have found useful when getting started.
+
 ## Thanks to…
 * [iloveitaly](https://github.com/iloveitaly) for turning me on to the idea of
   dotfiles in the first place
 * [Mathias Bynens](https://github.com/mathiasbynens) for sharing his amazing collection of [dotfiles](https://github.com/mathiasbynens/dotfiles)
 * [thoughtbot](https://github.com/thoughtbot/dotfiles) for sharing their awesome
-  `vimrc` configs
+  `vim` and `tmux` configs
