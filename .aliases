@@ -1,3 +1,6 @@
+# Easily resource bash config
+alias rb=". ~/.bashrc; echo Resourced bash prompt!"
+
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
