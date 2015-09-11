@@ -66,9 +66,26 @@ commands](https://gist.github.com/davidlaprade/ec6b0e26a6525f89293a) that I have
 ### Tmux Installation/Configuration
 
 ```bash
+brew update
 brew install tmux
+brew install reattach-to-user-namespace
 # optional -- adds a battery meter to tmux status bar
 brew tap Goles/battery && brew install battery
+```
+
+Sym link your config files:
+```bash
+cd && ln -s path/to/tmux.conf &&\
+  ln -s path/to/tmux.conf.local
+```
+
+The `.tmux.conf.local` file presupposes that you have
+a `~/bin` directory that contains the `tat` and `tmux_attach_autocomplete`
+files. So create that directory if it doesn't exist and copy those files in.
+
+Don't forget to source your tmux config files:
+```bash
+tmux source-file ~/.tmux.conf
 ```
 
 Make sure iTerm's color preferences are correct. Go to iTerm > Preferences >
