@@ -67,6 +67,9 @@ alias gsu="git submodule sync && git submodule update --init --recursive"
 alias z="zeus"
 alias zs="zeus start"
 
+# spring
+alias sr="bin/spring rspec"
+
 # rails
 alias spree_clear_test="rm -R spec/dummy && bundle exec rake test_app"
 alias rk="rake"
