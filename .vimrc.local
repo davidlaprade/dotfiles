@@ -35,6 +35,9 @@ map <Leader>c "*y
 " paste from clipboard
 map <Leader>v "*p
 
+" easier window close
+map <Leader>q <C-w>q
+
 " Color scheme
 colorscheme github
 highlight NonText guibg=#060606
@@ -46,3 +49,12 @@ let g:rspec_command = "Dispatch bin/spring rspec {spec}"
 nnoremap <Leader>rt :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>rs :call RunNearestSpec()<CR>
 nnoremap <Leader>rl :call RunLastSpec()<CR>
+nnoremap <Leader>ra :call RunAllSpecs()<CR>
+
+" smarter window resizing with CTRL-W-+/-
+if bufwinnr(1)
+  map + <C-w>+
+  map - <C-w>-
+endif
+map <Leader>, <C-w>>
+map <Leader>. <C-w><
