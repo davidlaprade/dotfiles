@@ -65,6 +65,7 @@ alias gsu="git submodule sync && git submodule update --init --recursive"
 # zeus
 alias z="zeus"
 alias zs="zeus start"
+alias zr="zeus rspec"
 
 # spring
 alias bs="bin/spring"
