@@ -10,8 +10,8 @@ set -g status-right-length 50
 set -g status-right " #(battery -at)  #(date '+%a, %b %d - %I:%M %p') "
 
 # vim-like opening of panes
-bind-key - split-window -v -c '#{pane_current_path}'
-bind-key / split-window -h -c '#{pane_current_path}'
+bind-key s split-window -v -c '#{pane_current_path}'
+bind-key v split-window -h -c '#{pane_current_path}'
 
 # resize panes
 bind -n S-Left resize-pane -L 2
