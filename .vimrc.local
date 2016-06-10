@@ -1,5 +1,9 @@
 set relativenumber
 
+" perform case insensitive search unless search contains capitol letter
+set ignorecase " needed for smartcase
+set smartcase
+
 " exit insert mode with 'jk'
 inoremap jk <Esc>
 
