@@ -42,6 +42,9 @@ map <Leader>v "*p
 " easier window close
 map <Leader>q <C-w>q
 
+" enter explore mode
+map <Leader>e :Explore<cr>
+
 " Color scheme
 colorscheme github
 highlight NonText guibg=#060606
