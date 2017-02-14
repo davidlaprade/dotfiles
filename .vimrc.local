@@ -33,6 +33,10 @@ map <Leader>j :jumps<cr>
 " fix indentation in whole file
 map <Leader>i mmgg=G`m
 
+" fix Sierra OS issues with tmux/vim clipboard
+" https://github.com/tmux/tmux/issues/543#issuecomment-248980734
+set clipboard=unnamed
+
 " copy to clipboard
 map <Leader>c "*y
 
