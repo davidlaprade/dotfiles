@@ -15,7 +15,7 @@
   pf = "!git push --force origin `git rev-parse --abbrev-ref HEAD`"
   st = status -sb
   a = add -A
-  cm = commit
+  cm = "!if git diff --cached --word-diff -- "*.[e]?rb$" | grep -q '{+.*binding.pry'; then echo 'abort! contains breakpoints'; else git commit --verbose; fi"
   c = checkout
   cb = checkout -b
   bd = branch -d
