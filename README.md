@@ -71,6 +71,9 @@ brew install tmux
 brew install reattach-to-user-namespace
 # optional -- adds a battery meter to tmux status bar
 brew tap Goles/battery && brew install battery
+
+# add Ressurect Tmux to persist sessions through computer restart
+git clone https://github.com/tmux-plugins/tmux-resurrect ~/tmux-resurrect
 ```
 
 Sym link your config files:
