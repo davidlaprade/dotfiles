@@ -12,8 +12,8 @@ elif infocmp xterm-256color >/dev/null 2>&1; then
 fi;
 
 prompt_date() {
-  # d=`date +%m.%d.%y-%T` # to include the date
-  d=$(date +%T)
+  d=`date +%m.%d.%y\ -\ %T` # to include the date
+  # d=$(date +%T)
   echo -e $d
 }
 
