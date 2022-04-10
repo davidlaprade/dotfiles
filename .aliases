@@ -44,10 +44,7 @@ alias rmatec="ssh -R 52698:localhost:52698"
 alias fs="stat -f \"%z bytes\""
 
 # vim
-alias vim="/usr/local/Cellar/vim/7.4.712/bin/vim"
-vimpath () { vim ${1:-.}; }
-# usecases: `v`, `v <absolute path>`, `v <relative path>`, `v ~/*`
-alias v="vimpath"
+alias v="vim"
 
 # tmux
 alias t="tmux"
