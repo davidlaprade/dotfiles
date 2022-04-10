@@ -38,7 +38,6 @@ alias c="tr -d '\n' | pbcopy"
 # Shortcuts
 alias ds="cd ~/Desktop"
 alias p="cd ~/Projects"
-alias rmatec="ssh -R 52698:localhost:52698"
 
 # File size
 alias fs="stat -f \"%z bytes\""
@@ -60,23 +59,7 @@ alias g="hub"
 alias gpb='g pull --rebase origin `git rev-parse --abbrev-ref HEAD`'
 alias gsu="git submodule sync && git submodule update --init --recursive"
 
-# zeus
-alias z="zeus"
-alias zs="zeus start"
-alias zr="zeus rspec"
-
-# spring
-alias bs="bin/spring"
-alias sr="bin/spring rspec"
-
-# screenhero
-alias ksh="kill $(ps aux | grep '[s]creenhero' | awk '{print $2}')"
-
 # rails
-alias spree_clear_test="rm -R spec/dummy && bundle exec rake test_app"
-alias rk="rake"
-alias tl='tail -f log/development.log'
-alias tts="touch tmp/restart.txt"
 alias be="b exec"
 alias b="bundle"
 
