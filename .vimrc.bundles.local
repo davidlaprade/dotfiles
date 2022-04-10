@@ -8,3 +8,15 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-ragtag'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elixir-lang/vim-elixir'
+Plug 'tomlion/vim-solidity'
+
+" vue/JS stuff
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'leafgarland/typescript-vim'
+
+" Plug 'leafOfTree/vim-vue-plugin'
+Plug 'posva/vim-vue'
+
+" solidity stuff
+Plug 'thesis/vim-solidity'
