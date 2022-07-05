@@ -21,3 +21,4 @@ Plug 'posva/vim-vue'
 
 " solidity stuff
 Plug 'thesis/vim-solidity'
+set nofoldenable " disable annoying folding that vim-solidity does by default
