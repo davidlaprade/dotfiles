@@ -1,14 +1,15 @@
 Plug 'rking/ag.vim'
-Plug 'terryma/vim-multiple-cursors'
+" Plug 'terryma/vim-multiple-cursors'
 Plug 'endel/vim-github-colorscheme'
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'tpope/rbenv-ctags'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-ragtag'
+" Plug 'tpope/rbenv-ctags'
+" Plug 'tpope/vim-dispatch'
+" Plug 'tpope/vim-ragtag'
 Plug 'christoomey/vim-tmux-navigator'
+
+" elixir stuff
 Plug 'elixir-lang/vim-elixir'
-Plug 'tomlion/vim-solidity'
 
 " vue/JS stuff
 Plug 'pangloss/vim-javascript'
