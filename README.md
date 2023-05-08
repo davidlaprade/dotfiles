@@ -13,11 +13,9 @@ brew update
 brew install vim
 ```
 
-Next install c-tags and some associated programs:
+Next install language-servers and associated programs:
 ```bash
-brew install ctags
-gem install gem-ctags
-gem ctags
+npm install -g typescript typescript-language-server
 ```
 
 Next sym-link your `.vimrc`, `.vimrc.bundles`, and `.git_templates` into `~`:
