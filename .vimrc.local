@@ -77,6 +77,10 @@ function! ResetPaneLayout()
 endfunction
 autocmd WinNew * call ResetPaneLayout()
 
+
+" fuzzy file search using fzf with CTRL-P
+map <C-p> :FZF<cr>
+
 "-------------------------------------------
 "        BEGIN LSP configuration
 "-------------------------------------------

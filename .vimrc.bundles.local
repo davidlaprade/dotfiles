@@ -2,6 +2,7 @@
 Plug 'prabirshrestha/vim-lsp'
 Plug 'natebosch/vim-lsc'
 
+" General productivity stuff
 Plug 'rking/ag.vim'
 " Plug 'terryma/vim-multiple-cursors'
 Plug 'endel/vim-github-colorscheme'
@@ -11,6 +12,10 @@ Plug 'nelstrom/vim-textobj-rubyblock'
 " Plug 'tpope/vim-dispatch'
 " Plug 'tpope/vim-ragtag'
 Plug 'christoomey/vim-tmux-navigator'
+
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " elixir stuff
 Plug 'elixir-lang/vim-elixir'
