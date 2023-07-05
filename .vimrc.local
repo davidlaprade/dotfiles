@@ -77,71 +77,29 @@ function! ResetPaneLayout()
 endfunction
 autocmd WinNew * call ResetPaneLayout()
 
-
 " fuzzy file search using fzf with CTRL-P
 map <C-p> :FZF<cr>
 
 "-------------------------------------------
 "        BEGIN LSP configuration
 "-------------------------------------------
-" https://github.com/prabirshrestha/vim-lsp
-function! s:on_lsp_buffer_enabled() abort
-    setlocal omnifunc=lsp#complete
-    setlocal signcolumn=yes
-    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-    " nmap <buffer> <leader>gd <plug>(lsp-definition)
-    nmap <buffer> <C-]> <plug>(lsp-definition)
-    " nmap <buffer> gs <plug>(lsp-document-symbol-search)
-    " nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
-    " nmap <buffer> gr <plug>(lsp-references)
-    " nmap <buffer> <leader>gi <plug>(lsp-implementation)
-    nmap <buffer> <leader>gt <plug>(lsp-type-definition)
-    " nmap <buffer> <leader>rn <plug>(lsp-rename)
-    " nmap <buffer> [g <plug>(lsp-previous-diagnostic)
-    " nmap <buffer> ]g <plug>(lsp-next-diagnostic)
-    " nmap <buffer> K <plug>(lsp-hover)
-    " nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
-    " nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
-
-    let g:lsp_format_sync_timeout = 1000
-    autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
-
-    " refer to doc to add more commands
-endfunction
-
-augroup lsp_install
-    au!
-    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
-
-" npm install -g typescript typescript-language-server
-if executable('typescript-language-server')
-  au User lsp_setup call lsp#register_server({
-        \ 'name': 'typescript-language-server',
-        \ 'cmd': {server_info->['typescript-language-server', '--stdio']},
-        \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
-        \ 'whitelist': ['typescript', 'javascript', 'typescriptreact', 'javascriptreact'],
-        \ })
-endif
-
-" https://github.com/natebosch/vim-lsc
-" let g:lsc_auto_map = {
-"     \ 'GoToDefinition': '<C-]>',
-"     \ 'GoToDefinitionSplit': ['<C-W>]', '<C-W><C-]>'],
-"     \ 'FindReferences': 'gr',
-"     \ 'NextReference': '<C-n>',
-"     \ 'PreviousReference': '<C-p>',
-"     \ 'FindImplementations': 'gI',
-"     \ 'FindCodeActions': 'ga',
-"     \ 'Rename': 'gR',
-"     \ 'ShowHover': v:true,
-"     \ 'DocumentSymbol': 'go',
-"     \ 'WorkspaceSymbol': 'gS',
-"     \ 'SignatureHelp': 'gm',
-"     \ 'Completion': 'completefunc',
-"     \}
-
+" Make sure you:
+"   npm install -g typescript typescript-language-server
+"
+" let g:ale_lint_delay = 1000
+let g:ale_hover_to_preview = 1
+" let g:ale_hover_cursor = 1
+" When using Neovim or Vim with |popupwin|, if |g:ale_hover_to_floating_preview|
+" or |g:ale_floating_preview| is set to 1, the hover information will show in a
+nnoremap <C-]> :ALEGoToDefinition<CR>
+nnoremap K :ALEHover<CR>
+nnoremap F :ALEFix<CR>
+nnoremap N :ALENext<CR>
+nnoremap D :ALEDetail<CR>
+let g:ale_fixers = ['prettier', 'eslint']
+let g:ale_verbose = 1
+let g:ale_keep_log = 1
+"
 "-------------------------------------------
 "        END LSP configuration
 "-------------------------------------------

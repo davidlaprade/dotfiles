@@ -1,6 +1,5 @@
 " Language Server Protocol
-Plug 'prabirshrestha/vim-lsp'
-Plug 'natebosch/vim-lsc'
+Plug 'dense-analysis/ale'
 
 " General productivity stuff
 Plug 'rking/ag.vim'
@@ -17,6 +16,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'elixir-lang/vim-elixir'
 
 " vue/JS stuff
+" prettier/eslint is handled by ale (above)
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
