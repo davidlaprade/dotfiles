@@ -4,7 +4,6 @@ Plug 'natebosch/vim-lsc'
 
 " General productivity stuff
 Plug 'rking/ag.vim'
-" Plug 'terryma/vim-multiple-cursors'
 Plug 'endel/vim-github-colorscheme'
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
@@ -21,8 +20,6 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
-
-" Plug 'leafOfTree/vim-vue-plugin'
 Plug 'posva/vim-vue'
 
 " solidity stuff
