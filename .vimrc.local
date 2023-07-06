@@ -87,10 +87,14 @@ map <C-p> :GFiles<cr>
 "   npm install -g typescript typescript-language-server
 "
 " let g:ale_lint_delay = 1000
-let g:ale_hover_to_preview = 1
 " let g:ale_hover_cursor = 1
-" When using Neovim or Vim with |popupwin|, if |g:ale_hover_to_floating_preview|
-" or |g:ale_floating_preview| is set to 1, the hover information will show in a
+" To figure out why this wasn't working the way I wanted, I had to go into
+"   ~/.vim/bundle/ale/autoload/ale/hover.vim and put echo statements into
+"   ale#hover#HandleTSServerResponse.
+let g:ale_hover_to_preview = 1
+let g:ale_hover_to_floating_preview = 1
+let g:ale_floating_preview = 1
+highlight Pmenu ctermbg=156 ctermfg=8
 nnoremap <C-]> :ALEGoToDefinition<CR>
 nnoremap K :ALEHover<CR>
 nnoremap F :ALEFix<CR>
