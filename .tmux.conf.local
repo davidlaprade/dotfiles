@@ -33,7 +33,7 @@ setw -g mode-keys vi
 
 # Copy from tmux into OSX clipboard
 bind-key -T copy-mode-vi v send-keys -X begin-selection
-bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
+bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "pbcopy"
 
 # Enter copy mode with <prefix> CNTL+k
 unbind [

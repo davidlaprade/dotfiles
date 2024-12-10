@@ -66,7 +66,6 @@ commands](https://gist.github.com/davidlaprade/ec6b0e26a6525f89293a) that I have
 ```bash
 brew update
 brew install tmux
-brew install reattach-to-user-namespace
 # optional -- adds a battery meter to tmux status bar
 brew tap Goles/battery && brew install battery
 
