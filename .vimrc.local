@@ -1,5 +1,10 @@
 " set relativenumber
 
+" If your cursor color is white and unresponsive (i.e. doesn't change based on
+" the color of the text it is hovering over) then you need to enable 'Context
+" aware cursor color' in iTerm2. It is NOT a vim setting.
+" Go to: iTerm2 > Preferences > Profiles > Colors (you will find it here)
+
 " perform case insensitive search unless search contains capitol letter
 set ignorecase " needed for smartcase
 set smartcase

@@ -9,6 +9,27 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
+# These are the settings I actually use
+###############################################################################
+
+defaults write NSGlobalDomain KeyRepeat -int 2\n
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false\n
+defaults write com.apple.dock launchanim -bool false\n
+defaults write com.apple.dock expose-animation-duration -float 0.1\n
+defaults write com.apple.dock autohide-time-modifier -float 0\n
+defaults write com.apple.dock no-glass -bool true\n
+defaults write com.apple.dock mineffect -string scale\n
+
+# Remove the auto-hiding Dock delay
+defaults write com.apple.dock autohide-delay -float 0
+# Remove the animation when hiding/showing the Dock
+defaults write com.apple.dock autohide-time-modifier -float 0
+# Set the icon size of Dock items to 48 pixels
+defaults write com.apple.dock tilesize -int 48 && killall Dock
+# Increase sound quality for Bluetooth headphones/headsets
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+
+###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
 

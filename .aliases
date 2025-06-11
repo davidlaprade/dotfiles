@@ -1,5 +1,6 @@
 # Easily resource bash config
-alias rb=". ~/.bashrc; echo Resourced bash prompt!"
+alias rb=". ~/.zshrc; echo Resourced zsh prompt!"
+alias rz=". ~/.zshrc; echo Resourced zsh prompt!"
 
 alias ll='ls -la'
 alias cl='clear'
@@ -22,15 +23,9 @@ alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias whois="whois -h whois-servers.net"
 
-# Flush Directory Service cache
-alias flush="dscacheutil -flushcache"
-
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
-
-# Start an HTTP server from a directory
-alias server="open http://localhost:8080/ && python -m SimpleHTTPServer 8080"
 
 # Trim new lines and copy to clipboard
 alias c="tr -d '\n' | pbcopy"
@@ -63,31 +58,11 @@ alias gsu="git submodule sync && git submodule update --init --recursive"
 alias be="b exec"
 alias b="bundle"
 
-# ROT13-encode text. Works for decoding, too! ;)
-alias rot13='tr a-zA-Z n-za-mN-ZA-M'
-
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
-
-# Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 # Disable Spotlight
 # alias spotoff="sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist && sudo mdutil -a -i off"
 # Enable Spotlight
 # alias spoton="sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist && sudo mdutil -a -i on"
-
-# PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
-alias plistbuddy="/usr/libexec/PlistBuddy"
-
-# Launch iOS Simulator
-alias ioss="open -a /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app"
-
-# One of @janmoesen’s ProTip™s
-for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do alias "$method"="lwp-request -m '$method'"; done
-
-# Kill all the tabs in Chrome to free up memory
-# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
-alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
