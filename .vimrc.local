@@ -4,6 +4,9 @@
 set ignorecase " needed for smartcase
 set smartcase
 
+" Don't add two spaces between sentences when reformatting comments.
+set nojoinspaces
+
 " exit insert mode with 'jk'
 inoremap jk <Esc>
 
@@ -85,6 +88,8 @@ map <C-p> :GFiles<cr>
 "-------------------------------------------
 " Make sure you:
 "   npm install -g typescript typescript-language-server
+"   npm install -g pyright
+"   npm install -g @nomicfoundation/solidity-language-server
 "
 " let g:ale_lint_delay = 1000
 " let g:ale_hover_cursor = 1
@@ -94,7 +99,12 @@ map <C-p> :GFiles<cr>
 let g:ale_hover_to_preview = 1
 let g:ale_hover_to_floating_preview = 1
 let g:ale_floating_preview = 1
+" Preview windows should be green with grey text
 highlight Pmenu ctermbg=156 ctermfg=8
+" We don't need to echo messages if we have floating previews
+let g:ale_echo_cursor = 0
+" We don't need virtual text errors at the end of lines if we have floating previews
+let g:ale_virtualtext_cursor = 0
 nnoremap <C-]> :ALEGoToDefinition<CR>
 nnoremap K :ALEHover<CR>
 nnoremap F :ALEFix<CR>

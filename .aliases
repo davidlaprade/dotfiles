@@ -55,7 +55,7 @@ fi
 
 # git
 alias glo='git log --graph --pretty=format:"%Cred%h%Creset - %s %Cgreen(%cr)%Creset" --abbrev-commit --date=relative'
-alias g="hub"
+alias g='git'
 alias gpb='g pull --rebase origin `git rev-parse --abbrev-ref HEAD`'
 alias gsu="git submodule sync && git submodule update --init --recursive"
 

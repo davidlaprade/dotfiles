@@ -73,7 +73,7 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 endif
 
-" Make it obvious where 80 characters is
+" Make it obvious where line breaks should be
 set textwidth=80
 set colorcolumn=+1
 

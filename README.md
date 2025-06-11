@@ -16,6 +16,7 @@ brew install vim
 Next install language-servers and associated programs:
 ```bash
 npm install -g typescript typescript-language-server
+pip install python-language-server
 ```
 
 Next sym-link your `.vimrc`, `.vimrc.bundles`, and `.git_templates` into `~`:
