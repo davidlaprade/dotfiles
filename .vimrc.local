@@ -118,7 +118,30 @@ nnoremap D :ALEDetail<CR>
 let g:ale_fixers = ['prettier', 'eslint']
 let g:ale_verbose = 1
 let g:ale_keep_log = 1
+
+" brew install pipx
+" pipx install 'python-lsp-server[all]'
+let g:ale_linters = {'python': ['pylsp']}
+let g:ale_python_language_server = 'pylsp'
 "
 "-------------------------------------------
 "        END LSP configuration
+"-------------------------------------------
+
+
+"-------------------------------------------
+"        Begin Copilot Configs
+"-------------------------------------------
+" Detect .env and friends
+augroup dotenv_detect
+  autocmd!
+  autocmd BufRead,BufNewFile *.env,*.env.*  set filetype=dotenv
+augroup END
+" Disable Copilot in .env / dotenv buffers
+let g:copilot_filetypes = {
+  \ '*':      v:true,
+  \ 'dotenv': v:false
+  \ }
+"-------------------------------------------
+"        End Copilot Configs
 "-------------------------------------------
