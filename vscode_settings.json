@@ -1,0 +1,15 @@
+{
+    "window.commandCenter": true,
+    "workbench.colorTheme": "Cursor Dark High Contrast",
+    "editor.rulers": [80],
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "vim.insertModeKeyBindingsNonRecursive": [
+        // Press “j” then “k” (in quick succession) to leave Insert mode
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.useSystemClipboard": true, // yank to clipboard
+}
