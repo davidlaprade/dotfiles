@@ -12,4 +12,12 @@
         }
     ],
     "vim.useSystemClipboard": true, // yank to clipboard
+    "vim.autocmds": [
+        { // Delete lines that are just empty spaces on save.
+            "event": "BufWritePre",
+            "pattern": "*",
+            "command": ":%s/^\\s\\+$//e"
+        }
+    ],
+    "window.autoDetectColorScheme": false
 }
