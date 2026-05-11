@@ -28,6 +28,8 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 defaults write com.apple.dock tilesize -int 48 && killall Dock
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+# Enable key repeat in vim mode in Cursor.
+defaults write $(osascript -e 'id of app "Cursor"') ApplePressAndHoldEnabled -bool false
 
 ###############################################################################
 # General UI/UX                                                               #
