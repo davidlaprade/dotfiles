@@ -1,0 +1,16 @@
+schema_version: 1
+id: local.git_policy
+name: Custom Git Policy
+version: 1.0.0
+
+keywords:
+  - git
+
+destructive_patterns:
+  - name: push-force-with-lease
+    pattern: '\bgit\s+push\b[^\n]*--force-with-lease(?:=|\b)'
+    severity: critical
+    description: "git push --force-with-lease is disabled by local policy."
+    explanation: "--force-with-lease is safer than --force but still not safe, agents often don't ask before using it and will change commits when reviewing code"
+    executables:
+      - git

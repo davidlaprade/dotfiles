@@ -1,0 +1,12 @@
+# https://github.com/Dicklesworthstone/destructive_command_guard
+[packs]
+enabled = [
+    "database.postgresql",    # Blocks DROP TABLE, TRUNCATE
+    "cloud.aws",              # Blocks aws ec2 terminate-instances
+    "containers.docker",      # Blocks docker system prune
+    "infrastructure.terraform",
+    "cdn.cloudflare_workers",
+]
+custom_paths = [
+    "~/.config/dcg/packs/*.yaml",
+]
