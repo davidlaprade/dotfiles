@@ -11,6 +11,6 @@ destructive_patterns:
     pattern: '\bgit\s+push\b[^\n]*--force-with-lease(?:=|\b)'
     severity: critical
     description: "git push --force-with-lease is disabled by local policy."
-    explanation: "--force-with-lease is safer than --force but still not safe, agents often don't ask before using it and will change commits when reviewing code"
+    explanation: "--force-with-lease is safer than --force but still not safe.\n\nEven if the remote hasn't changed since you last pulled, you may not want to override what is there. For example, if the agent amended commits locally, --force-with-lease can replace remote history without asking you.\n\nWhat can go wrong:\n- An agent can rewrite remote history without explicit approval\n- Amended or rebased commits can replace existing remote commits\n- Agents may treat --force-with-lease as \"safe\" and use it without asking\n\nSafer alternative:\n- Ask the user before rewriting any remote Git history"
     executables:
       - git
