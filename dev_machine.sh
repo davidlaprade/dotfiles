@@ -3,6 +3,8 @@
 bash brew.sh
 bash bootstrap.sh
 
+curl -fsSL "https://raw.githubusercontent.com/Dicklesworthstone/destructive_command_guard/main/install.sh?$(date +%s)" | bash -s -- --easy-mode
+
 read -p "WARNING: you are about to install a very opinionated set of OSX applications, do you want to continue? (Y,n)" -n 1
 echo
 if [[ $REPLY =~ Y ]]; then
